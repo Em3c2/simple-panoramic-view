@@ -1,0 +1,31 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jakutinga panorama</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+  <style>
+    body {
+      background-color: black;
+      display: grid;
+      place-content: center;
+    }
+
+    #panorama {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="panorama"></div>
+  <script>
+    pannellum.viewer('panorama', {
+      "type": "equirectangular",
+      "panorama": "https://res.cloudinary.com/emeimgstore/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency/v1673383794/jakutinga_gwnith.jpg",
+      "haov": 360,
+      "vaov": 45,
+    });
+  </script>
+</body>
